@@ -1,13 +1,16 @@
 <template>
   <div>
-    hello
+    <!-- <uy-swiper></uy-swiper> -->
   </div>
 </template>
 
 <script>
-export default {}
-</script>
-<style>
+// import swiper from '~/components/swiper.vue'
 
-</style>
+export default {
+  components: {
+      // 'uy-swiper': swiper
+    }
+}
+</script>
 
