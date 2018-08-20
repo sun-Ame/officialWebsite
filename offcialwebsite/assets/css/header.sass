@@ -1,0 +1,42 @@
+$header-height: 4.7rem;
+
+header
+    height: $header-height;
+    line-height: $header-height;
+    background: #fff;
+    box-shadow: 0 0 2px #eee;
+    .header-main
+        display: flex;
+        width: 69rem;
+        height: 100%;
+        margin: 0 auto;
+        h1
+            width: 14rem;
+            height: 100%;
+            font-size: 0.8rem;
+            line-height: 1rem;
+            font-weight: normal;
+            box-sizing: border-box;
+            padding-top: .8rem;
+            padding-left: 50px;
+            background: url('~/assets/img/logo.png') left center;
+            background-repeat: no-repeat;
+            span
+                display: block;
+                padding-bottom: .6rem;
+                padding-left: .5rem;
+                color: #999;
+
+nav
+    margin-left: 8rem;
+    span
+        margin: 0 1rem;
+        padding: 2px 1.2rem;
+        cursor: pointer;
+        border-radius: 1rem;
+        &:hover
+            background: #0084ff;
+            color: #fff;
+    .on
+        background: #0084ff;
+        color: #fff;

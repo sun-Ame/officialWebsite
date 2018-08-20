@@ -16,8 +16,7 @@ module.exports = {
   */
   router: {},
   css: [
-    'normalize.css',
-    '~/assets/css/main.sass',
+    '~/assets/css/_all.sass',
   ],
   modules: [
     '@nuxtjs/axios'
