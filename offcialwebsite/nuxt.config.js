@@ -18,10 +18,6 @@ module.exports = {
     
   },
   css: [
-<<<<<<< HEAD
-=======
-    'normalize.css',
->>>>>>> f486c1b7d19f91c631cfe28a69b2dfd2ac8f2ad8
     '~/assets/css/_all.sass',
   ],
   modules: [
