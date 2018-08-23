@@ -1,29 +1,53 @@
 <template>
-    <div class="swiper">
-        <swiper :options="swiperOption" ref="mySwiper">
-            <!-- slides -->
-            <swiper-slide>I'm Slide 1</swiper-slide>
-            <swiper-slide>I'm Slide 2</swiper-slide>
-            <swiper-slide>I'm Slide 3</swiper-slide>
-            <!-- Optional controls -->
-            <div class="swiper-pagination"  slot="pagination"></div>
-            <div class="swiper-button-prev" slot="button-prev"></div>
-            <div class="swiper-button-next" slot="button-next"></div>
-            <div class="swiper-scrollbar"   slot="scrollbar"></div>
-        </swiper>
+    <div class="uyswiper" v-swiper:mySwiper="swiperOption" @slideChange="callback">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="(banner,index) in banners" :key="index">
+                <img :src="banner.url" :alt="banner.alt"/>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
     </div>
 </template>
 <script>
     import Vue from 'vue'
-    export default Vue.component('swiper', {
-        data() {
-            return {
-                swiperOption: {
-
+    export default Vue.component('uyswiper', {
+        props: {
+            banners: {
+                type: Array,
+                required: true,
+                default: function () {
+                    return []
                 }
             }
         },
+        data() {
+            return {
+                // slides: banners,
+                swiperOption: {
+                    initialSlide: 0,
+                    direction: 'horizontal',
+                    autoplay: true,
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'bullets'
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                }
+            }
+        },
+        mounted() {
+            console.log('this.mySwiper---====', this.mySwiper)
+        },
         methods: {
+            callback(e) {
+                console.log('ee-----', e)
+            }
         }
     })
 </script>
