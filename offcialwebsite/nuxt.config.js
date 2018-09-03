@@ -29,6 +29,7 @@ module.exports = {
   proxy: {},
   plugins: [
     '~/plugins/plugins',
+    { src:"~plugins/mock", ssr: true }
   ],
   build: {
     /*
