@@ -2,15 +2,16 @@ import axios from 'axios'
 import Vue from 'vue'
 import qs from 'qs'
 import config from './config'
+import { resolve } from 'url';
 
 if (process.server) {
   config.baseURL = `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
 }
 
-const service = axios.create(config)
+const http = axios.create(config)
 
 // POST 传参序列化
-service.interceptors.request.use(
+http.interceptors.request.use(
   config => {
     if (config.method === 'post') config.data = qs.stringify(config.data)
     return config
@@ -20,7 +21,7 @@ service.interceptors.request.use(
   }
 )
 // 返回状态判断
-service.interceptors.response.use(
+http.interceptors.response.use(
   res => {
     return res.data
   },
@@ -28,6 +29,5 @@ service.interceptors.response.use(
     return Promise.reject(error)
   }
 )
-
-Vue.prototype.axios = service;
-export default service 
+// Vue.prototype.$axios = http;
+export default http 

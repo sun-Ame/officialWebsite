@@ -1,6 +1,9 @@
-import axios   from '~/servers/index.js'
-
+import http from '~/servers/index.js'
 export const getList = async (store) => {
-    console.log('----/api/getlist')
-    return await axios.get('api/getlist/')
+	const data = await http.get('/api/getlist/')
+	return data
+}
+export const getSliders = async (store) => {
+	const data = await http.get('/api/getSwiper/')
+	return data
 }
