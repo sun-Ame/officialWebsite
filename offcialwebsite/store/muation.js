@@ -1,3 +1,3 @@
-export function LOGINSTATE (state, isLogin) {
+export function LOGINSTATE(state, isLogin) {
     state.login = isLogin
 }

@@ -1,5 +1,4 @@
 import axios from 'axios'
-import Vue from 'vue'
 import qs from 'qs'
 import config from './config'
 import { resolve } from 'url';
