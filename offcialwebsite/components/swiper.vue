@@ -11,14 +11,14 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-export default Vue.component("uyswiper", {
+import Vue from 'vue'
+export default Vue.component('uyswiper', {
   props: {
     banners: {
       type: Array,
       required: true,
       default: function() {
-        return [];
+        return []
       }
     }
   },
@@ -27,27 +27,24 @@ export default Vue.component("uyswiper", {
       // slides: banners,
       swiperOption: {
         initialSlide: 0,
-        direction: "horizontal",
+        direction: 'horizontal',
         autoplay: true,
         loop: true,
         pagination: {
-          el: ".swiper-pagination",
-          type: "bullets"
+          el: '.swiper-pagination',
+          type: 'bullets'
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         }
       }
-    };
-  },
-  mounted() {
-    console.log("this.mySwiper---====", this.mySwiper);
+    }
   },
   methods: {
     callback(e) {
-      console.log("ee-----", e);
+      console.log('ee-----', e)
     }
   }
-});
+})
 </script>

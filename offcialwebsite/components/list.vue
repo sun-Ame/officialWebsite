@@ -8,8 +8,8 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-export default Vue.component("uylistitem", {
+import Vue from 'vue'
+export default Vue.component('uylistitem', {
   props: {
     item: {
       type: Object,
@@ -18,18 +18,18 @@ export default Vue.component("uylistitem", {
         return {
           id: 1,
           img: {
-            url: "",
-            alt: ""
+            url: '',
+            alt: ''
           },
-          title: "",
-          content: ""
-        };
+          title: '',
+          content: ''
+        }
       }
     }
   },
   data() {
-    return {};
+    return {}
   },
   methods: {}
-});
+})
 </script>

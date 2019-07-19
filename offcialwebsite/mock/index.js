@@ -1,6 +1,6 @@
-const Mock = require('mockjs');
+const Mock = require('mockjs')
 const Random = Mock.Random
-const listData = function () {
+const listData = function() {
 	let data = []
 	for (let i = 0; i < 5; i++) {
 		let item = {
@@ -18,7 +18,7 @@ const listData = function () {
 		data: data,
 	}
 }
-const sliders = function () {
+const sliders = function() {
 	let data = []
 	for (let i = 0; i < 3; i++) {
 		let item = {

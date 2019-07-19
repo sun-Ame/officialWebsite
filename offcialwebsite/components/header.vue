@@ -20,17 +20,17 @@
                 navs:[{
                     name:'首页',
                     url:'/'
-                },{
+                }, {
                     name:'解决方案',
                     url:'/'
-                },{
+                }, {
                     name:'关于我们',
                     url:'about'
                 }]
             }
         },
         methods:{
-            goLink(index){
+            goLink(index) {
                 this.active = index
                 this.$router.push(this.navs[index].url)
             }

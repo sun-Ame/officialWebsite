@@ -1,7 +1,6 @@
 import axios from 'axios'
 import qs from 'qs'
 import config from './config'
-import { resolve } from 'url';
 
 if (process.server) {
   config.baseURL = `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
@@ -29,4 +28,4 @@ http.interceptors.response.use(
   }
 )
 // Vue.prototype.$axios = http;
-export default http 
+export default http
